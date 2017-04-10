@@ -1,6 +1,7 @@
-12:00:28 **** Incremental Build of configuration Debug for project demo ****
-make all 
-make: Nothing to be done for `all'.
+09:38:16 **** Clean-only build of configuration Debug for project demo ****
+make clean 
+rm -rf  ./src/cr_startup_lpc17.o ./src/main.o  ./src/cr_startup_lpc17.d ./src/main.d  demo1.axf
+ 
 
-12:00:28 Build Finished (took 232ms)
+09:38:19 Build Finished (took 2s.790ms)
 

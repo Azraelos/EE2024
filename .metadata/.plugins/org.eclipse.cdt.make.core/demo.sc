@@ -5,6 +5,9 @@
 <includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include"/>
 <includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include-fixed"/>
 <includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include-fixed"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
@@ -325,6 +328,9 @@
 <includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include"/>
 <includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include-fixed"/>
 <includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include-fixed"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
@@ -642,9 +648,9 @@
 </instance>
 <instance id="com.crt.advproject.config.exe.release.228240151;com.crt.advproject.config.exe.release.228240151.;com.crt.advproject.gcc.exe.release.619368085;com.crt.advproject.compiler.input.1358421013">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include"/>
-<includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include-fixed"/>
-<includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include-fixed"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
@@ -962,9 +968,9 @@
 </instance>
 <instance id="com.crt.advproject.config.exe.release.228240151;com.crt.advproject.config.exe.release.228240151.;com.crt.advproject.gas.exe.release.114330999;com.crt.advproject.assembler.input.84703301">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include"/>
-<includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include-fixed"/>
-<includePath path="c:\nxp\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/include-fixed"/>
+<includePath path="c:\labsoft\ee2024\lpcxpresso_6.1.4_194\lpcxpresso\tools\bin\../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>

@@ -15,7 +15,7 @@
 #include "rgb.h"
 #include "led7seg.h"
 
-uint32_t getMsTicks();
+uint32_t getTicks();
 
 static void drawOled(uint8_t joyState)
 {
@@ -284,174 +284,56 @@ void EINT3_IRQHandler (void)
 	}
 }
 
-uint32_t getMsTicks()
-{
-	return ticks/1000;
-}
-
-uint32_t getSTicks()
-{
-	return ticks/1000000;
+uint32_t getTicks(){
+	return ticks;
 }
 
 #define Light_Low_Warning 200
 
 static char* msg = NULL;
 
-uint8_t btn1 = 1;
-
-int32_t xoff = 0;
-int32_t yoff = 0;
-int32_t zoff = 0;
-
-int8_t x = 0;
-int8_t y = 0;
-int8_t z = 0;
-
-int8_t xold = 0;
-int8_t yold = 0;
-int8_t zold = 0;
-
-uint32_t debounceTime = 0;
-uint32_t lastDebounceTime = 0;
-uint32_t debounceDelay = 100000;
-
-int mode = 0;
-
-void stable (void) {
-	oled_clearScreen(OLED_COLOR_BLACK);
-	while (mode == 0) {
-		//If interrupts come faster than 100ms, assume it's a bounce and ignore
-		debounceTime = getMsTicks();
-		if (debounceTime - lastDebounceTime > debounceDelay) {
-			lastDebounceTime = debounceTime;
-			btn1 = ((GPIO_ReadValue(1) >> 31) & 0x01);
-		}
-		if (btn1 == 0) {
-			mode = 1;
-		}
-	}
-}
-
-void monitor (void) {
-	uint32_t sTicks;
-
-	uint32_t light = 0;
-
-	double temp = 0;
-
-	char sens_value[5];
-
-	oled_clearScreen(OLED_COLOR_WHITE);
-	oled_putString(2, 2, "Light : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-	oled_putString(2, 12, "Acc_X : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-	oled_putString(2, 22, "Acc_Y : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-	oled_putString(2, 32, "Acc_Z : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-	oled_putString(2, 42, "Temp  : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-	oled_putString(2, 52, "MONITOR", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-
-	acc_read(&x, &y, &z);
-	x = x+xoff;
-	y = y+yoff;
-	z = z+zoff;
-
-	temp = (double) temp_read();
-
-	light = light_read();
-
-	while (mode == 1) {
-		//If interrupts come faster than 100ms, assume it's a bounce and ignore
-		debounceTime = getMsTicks();
-		if (debounceTime - lastDebounceTime > debounceDelay) {
-			lastDebounceTime = debounceTime;
-			btn1 = ((GPIO_ReadValue(1) >> 31) & 0x01);
-		}
-		if (btn1 == 0) {
-			mode = 0;
-		}
-		/* <----- Seven Segment Display -----> */
-		sTicks = getSTicks() % 16;
-		if(0 <= sTicks && sTicks < 10) {
-			led7seg_setChar(sTicks%16 + '0', FALSE);
-		} else if(10 <= sTicks && sTicks < 16) {
-			led7seg_setChar(sTicks%16 + '7', FALSE);
-		}
-
-		if (ticks%1000000 == 0) {
-			xold = x;
-			yold = y;
-			zold = z;
-			acc_read(&x, &y, &z);
-			x = x+xoff;
-			y = y+yoff;
-			z = z+zoff;
-
-			temp = (double) temp_read();
-
-			light = light_read();
-		}
-		if (sTicks%5 == 0) {
-			sprintf(sens_value, "%d", light);
-			oled_putString(50, 2, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			sprintf(sens_value, "%d", x);
-			oled_putString(50, 12, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			sprintf(sens_value, "%d", y);
-			oled_putString(50, 22, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			sprintf(sens_value, "%d", z);
-			oled_putString(50, 32, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			sprintf(sens_value, "%.1f", temp);
-			oled_putString(50, 42, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-		}
-
-		/*if ( (x*x != xold*xold || y*y != yold*yold || z*z != zold*zold) && light < 50) {
-			if(ticks%333 <= 166) {
-				GPIO_SetValue(0, (1<<26)); //blue
-			} else {
-				GPIO_ClearValue(0, (1<<26)); //blue
-			}
-		}
-
-		if (temp > 100) {
-			if(ticks%333000 <= 166) {
-				GPIO_SetValue(2, (1<<0)); //red
-			} else {
-				GPIO_ClearValue(2, (1<<0)); //red
-			}
-		}*/
-	}
-}
-
 int main (void) {
 
 	// SystemTick clock configuration
 	SysTick_Config(SystemCoreClock / 1000000);  // every 1us
 
-	//uint32_t sTicks;
+	uint32_t sTicks;
+	int songFlag = 0;
 
-	/*static int32_t xoff = 0;
-	static int32_t yoff = 0;
-	static int32_t zoff = 0;
+	int32_t xoff = 0;
+	int32_t yoff = 0;
+	int32_t zoff = 0;
 
-	static int8_t x = 0;
-	static int8_t y = 0;
-	static int8_t z = 0;
+	int8_t x = 0;
+	int8_t y = 0;
+	int8_t z = 0;
 
-	static int8_t xold = 0;
-	static int8_t yold = 0;
-	static int8_t zold = 0;*/
+	int8_t xold = 0;
+	int8_t yold = 0;
+	int8_t zold = 0;
 
-	//uint32_t light = 0;
+	uint8_t dir = 1;
+	uint8_t wait = 0;
 
-	//int32_t temp = 0;
+	uint8_t state = 0;
 
-	//char sens_value[5];
+	uint32_t light = 0;
+	char sens_value[40];
 
-	//uint8_t state = 0;
+	uint32_t temp = 0;
 
-	/*uint8_t data = 0;
+	uint8_t data = 0;
 	uint32_t len = 0;
 	uint8_t line[64];
-*/
+
+	uint8_t btn1 = 1;
+
+	int startTime = 0;
+
+	uint32_t debounceTime = 0;
+	uint32_t lastDebounceTime = 0;
+	uint32_t debounceDelay = 50;
+
 	init_i2c();
 	init_ssp();
 	init_GPIO();
@@ -462,7 +344,7 @@ int main (void) {
 	joystick_init();
 	acc_init();
 	light_enable();
-	temp_init(*getMsTicks);
+	temp_init(*getTicks);
 	oled_init();
 	led7seg_init();
 
@@ -475,6 +357,7 @@ int main (void) {
 	zoff = 64-z;
 
 	/* ---- Speaker ------> */
+
 	GPIO_SetDir(2, 1<<0, 1);
 	GPIO_SetDir(2, 1<<1, 1);
 
@@ -487,11 +370,10 @@ int main (void) {
 	GPIO_ClearValue(0, 1<<28); //LM4811-up/dn
 	GPIO_ClearValue(2, 1<<13); //LM4811-shutdn
 
-	/* <---- OLED ----> */
-	oled_clearScreen(OLED_COLOR_BLACK);
+	/* <---- Setup display ----> */
+	oled_clearScreen(OLED_COLOR_WHITE);
 	GPIO_SetValue( 2, (1<<1) );
 
-	/* <---- Interrupts ----> */
 	LPC_GPIOINT -> IO2IntEnF |= 1<<10;
 	LPC_GPIOINT -> IO2IntClr |= 1<<5;
 	LPC_GPIOINT -> IO2IntEnF |= 1<<5;
@@ -502,7 +384,7 @@ int main (void) {
 
 	//test sending message
 	msg = "Welcome to EE2024 \r\n";
-	//UART_Send(LPC_UART3, (uint8_t *)msg , strlen(msg), BLOCKING);
+	UART_Send(LPC_UART3, (uint8_t *)msg , strlen(msg), BLOCKING);
 	//test receiving a letter and sending back to port
 	//UART_Receive(LPC_UART3, &data, 1, BLOCKING);
 	//UART_Send(LPC_UART3, &data, 1, BLOCKING);
@@ -525,19 +407,32 @@ int main (void) {
 
 	while (1)
 	{
-		stable();
-		monitor();
+		/* ####### Accelerometer and LEDs  ###### */
+		/* # */
 
-		/* <----- Seven Segment Display ----->
-		sTicks = ticks / 1000 % 16;
-		if(0 <= sTicks && sTicks < 10) {
+
+
+		/* # */
+		/* ############################################# */
+
+		/* ####### Joystick and OLED  ###### */
+		/* # */
+
+		state = joystick_read();
+		if (state != 0)
+			drawOled(state);
+
+		/* <----- Seven Segment Display -----> */
+		sTicks = ticks / 1000000;
+		if(0 <= sTicks%16 && sTicks%16 < 10) {
 			led7seg_setChar(sTicks%16 + '0', FALSE);
-		} else if(10 <= sTicks && sTicks < 16) {
+		} else if(10 <= sTicks%16 && sTicks%16 < 16) {
 			led7seg_setChar(sTicks%16 + '7', FALSE);
 		}
 
-		 ############ Trimpot and RGB LED  ###########
-		 #
+		/* ############ Trimpot and RGB LED  ########### */
+		/* # */
+
 
 		debounceTime = ticks/1000;
 		// If interrupts come faster than 100ms, assume it's a bounce and ignore
@@ -545,6 +440,14 @@ int main (void) {
 		//lastDebounceTime = debounceTime;
 		btn1 = ((GPIO_ReadValue(1) >> 31) & 0x01);
 		//}
+
+		if (btn1 == 0) {
+			if(songFlag == 0){
+				songFlag = 1;
+			}else if(songFlag == 1){
+				songFlag = 0;
+			}
+		}
 
 		if (sTicks == 5 || sTicks == 10 || sTicks == 15) {
 
@@ -564,47 +467,41 @@ int main (void) {
 			oled_putString(2, 12, "Acc_X : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
 			oled_putString(2, 22, "Acc_Y : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
 			oled_putString(2, 32, "Acc_Z : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			oled_putString(2, 42, "Temp  : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
+			oled_putString(2, 42, "Temp : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
 			oled_putString(2, 52, "MONITOR", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
+			/*oled_putString(50, 2, light, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
+			oled_putString(50, 12, x, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
+			oled_putString(50, 22, y, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
+			oled_putString(50, 32, z, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
+			oled_putString(50, 42, temp, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
+		*/}
 
-			sprintf(sens_value, "%d", light);
-			oled_putString(50, 2, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			sprintf(sens_value, "%d", x);
-			printf("x : %d\n", x);
-			oled_putString(50, 12, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			sprintf(sens_value, "%d", y);
-			printf("y : %d\n", y);
-			oled_putString(50, 22, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			sprintf(sens_value, "%d", z);
-			printf("z : %d\n", z);
-			oled_putString(50, 32, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-			sprintf(sens_value, "%f", temp);
-			printf("temp : %d\n", temp);
-			oled_putString(50, 42, sens_value, OLED_COLOR_BLACK, OLED_COLOR_WHITE);
-		}*/
-
-		/*
+/*
 		if ( (x*x != xold*xold || y*y != yold*yold || z*z != zold*zold) && light < 50) {
-			if(ticks%333 < 166.5) {
+			if(ticks%333000 < 166500) {
 				GPIO_SetValue( 0, (1<<26) ); //blue
 			} else {
 				GPIO_ClearValue( 0, (1<<26) ); //blue
 			}
 		}
+*/
+/*
 
 		if (temp > 100) {
-			if(ticks%333000 < 166.5) {
+			if(ticks%333000 < 166500) {
 				GPIO_SetValue( 2, (1<<0) ); //red
 			} else {
 				GPIO_ClearValue( 2, (1<<0) ); //red
 			}
 		}
-		 */
+*/
+
+		if (songFlag == 1 && btn1 == 1){
+			playSong("A4.");
+		}
 
 		Timer0_Wait(1);
 	}
-
-
 }
 
 void check_failed(uint8_t *file, uint32_t line)
