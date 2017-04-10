@@ -1,0 +1,11 @@
+09:38:46 **** Incremental Build of configuration Debug for project EE2024Assign1S21617 ****
+make all 
+Building target: EE2024Assign1S21617.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"F:\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -Xlinker --gc-sections -Xlinker -Map=EE2024Assign1S21617.map -mcpu=cortex-m3 -mthumb -T "EE2024Assign1S21617_Debug.ld" -o"EE2024Assign1S21617.axf"  ./src/cr_startup_lpc17.o ./src/main.o ./src/pid_ctrl.o   -lCMSISv1p30_LPC17xx
+c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/bin/ld.exe: cannot find -lCMSISv1p30_LPC17xx
+collect2: ld returned 1 exit status
+make: *** [EE2024Assign1S21617.axf] Error 1
+
+09:38:47 Build Finished (took 406ms)
+

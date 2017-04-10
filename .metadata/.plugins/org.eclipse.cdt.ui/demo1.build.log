@@ -1,0 +1,47 @@
+11:47:37 **** Build of configuration Debug for project demo1 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"F:\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"F:\EE2024\Lib_CMSISv1p30_LPC17xx" -I"F:\EE2024\Lib_EaBaseBoard\inc" -I"F:\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:387:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:466:4: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+F:\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:467:4: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+F:\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:468:4: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+F:\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:469:4: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+F:\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:470:4: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+F:\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:471:4: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+F:\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:500:4: warning: pointer targets in passing argument 1 of 'playSong' differ in signedness [-Wpointer-sign]
+../src/main.c:143:13: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:335:11: warning: unused variable 'debounceDelay' [-Wunused-variable]
+../src/main.c:334:11: warning: unused variable 'lastDebounceTime' [-Wunused-variable]
+../src/main.c:333:11: warning: variable 'debounceTime' set but not used [-Wunused-but-set-variable]
+../src/main.c:331:6: warning: unused variable 'startTime' [-Wunused-variable]
+../src/main.c:327:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:326:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:325:10: warning: unused variable 'data' [-Wunused-variable]
+../src/main.c:323:11: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+../src/main.c:321:7: warning: unused variable 'sens_value' [-Wunused-variable]
+../src/main.c:320:11: warning: variable 'light' set but not used [-Wunused-but-set-variable]
+../src/main.c:316:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:315:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c:313:9: warning: variable 'zold' set but not used [-Wunused-but-set-variable]
+../src/main.c:312:9: warning: variable 'yold' set but not used [-Wunused-but-set-variable]
+../src/main.c:311:9: warning: variable 'xold' set but not used [-Wunused-but-set-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo1.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"F:\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"F:\EE2024\Lib_EaBaseBoard\Debug" -L"F:\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo1.map -mcpu=cortex-m3 -mthumb -T "demo1_Debug.ld" -o "demo1.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/bin/ld.exe: cannot find -lCMSISv1p30_LPC17xx
+collect2: ld returned 1 exit status
+make: *** [demo1.axf] Error 1
+
+11:47:54 Build Finished (took 16s.900ms)
+

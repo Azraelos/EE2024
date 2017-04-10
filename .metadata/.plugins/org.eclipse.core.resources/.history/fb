@@ -1,0 +1,45 @@
+ug\libLib_MCU.a(lpc17xx_pinsel.o)
+ .ARM.attributes
+                0x000002fd       0x33 F:\EE2024\Lib_MCU\Debug\libLib_MCU.a(lpc17xx_ssp.o)
+ .ARM.attributes
+                0x00000330       0x33 F:\EE2024\Lib_MCU\Debug\libLib_MCU.a(lpc17xx_timer.o)
+ .ARM.attributes
+                0x00000363       0x33 F:\EE2024\Lib_MCU\Debug\libLib_MCU.a(lpc17xx_clkpwr.o)
+ .ARM.attributes
+                0x00000396       0x1d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x000003b3       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x000003e0       0x1d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000003fd       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x0000042a       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x00000457       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000484       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-printf.o)
+ .ARM.attributes
+                0x000004b1       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-sprintf.o)
+ .ARM.attributes
+                0x000004de       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-svfprintf.o)
+ .ARM.attributes
+                0x0000050b       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-vfprintf.o)
+ .ARM.attributes
+                0x00000538       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-wsetup.o)
+ .ARM.attributes
+                0x00000565       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-dtoa.o)
+ .ARM.attributes
+                0x00000592       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fflush.o)
+ .ARM.attributes
+                0x000005bf       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-findfp.o)
+ .ARM.attributes
+                0x000005ec       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000619       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fwalk.o)
+ .ARM.attributes
+                0x00000646       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000673       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-locale.o)
+ .ARM.attributes
+                0x000006a0       0x2d c:/labsoft/ee2024/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../li

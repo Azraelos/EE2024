@@ -2697,42 +2697,42 @@
  885              		.text
  886              	.Letext0:
  887              		.file 3 "F:\\EE2024\\Lib_CMSISv1p30_LPC17xx\\inc/LPC17xx.h"
- 888              		.file 4 "c:\\nxp\\lpcxpresso_6.1.4_194\\lpcxpresso\\tools\\bin\\../lib/gcc/arm-none-eabi/4.6.2/../
+ 888              		.file 4 "c:\\labsoft\\ee2024\\lpcxpresso_6.1.4_194\\lpcxpresso\\tools\\bin\\../lib/gcc/arm-none-ea
  889              		.file 5 "F:\\EE2024\\Lib_CMSISv1p30_LPC17xx\\inc/system_LPC17xx.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:19     .text.NVIC_SetPriority:00000000 $t
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:23     .text.NVIC_SetPriority:00000000 NVIC_SetPriority
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:82     .text.SysTick_Config:00000000 $t
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:86     .text.SysTick_Config:00000000 SysTick_Config
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:150    .bss:00000000 usTicks
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:147    .bss:00000000 $d
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:153    .text.SysTick_Handler:00000000 $t
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:158    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:192    .text.plant:00000000 $t
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:197    .text.plant:00000000 plant
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:871    .bss:00000020 x4.4849
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:874    .bss:00000028 x3.4848
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:877    .bss:00000030 x2.4847
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:880    .bss:00000038 x1.4846
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:883    .bss:00000040 y.4850
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:382    .text.PIDcontrol:00000000 $t
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:387    .text.PIDcontrol:00000000 PIDcontrol
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:842    .bss:00000008 enOld.4859
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:845    .bss:00000010 sn.4858
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:851    .data:00000000 Kp.4855
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:857    .data:00000008 Ki.4856
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:863    .data:00000010 Kd.4857
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:868    .bss:00000018 un.4860
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:574    .rodata:00000000 $d
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:575    .rodata:00000000 .LC0
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:578    .rodata:00000008 .LC1
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:581    .rodata:00000034 .LC2
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:584    .text.main:00000000 $t
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:589    .text.main:00000000 main
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:839    .bss:00000004 loop.4878
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:828    .text.main:00000220 $d
-C:\Users\Andrew\AppData\Local\Temp\ccLnImfc.s:848    .data:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:19     .text.NVIC_SetPriority:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:23     .text.NVIC_SetPriority:00000000 NVIC_SetPriority
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:82     .text.SysTick_Config:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:86     .text.SysTick_Config:00000000 SysTick_Config
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:150    .bss:00000000 usTicks
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:147    .bss:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:153    .text.SysTick_Handler:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:158    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:192    .text.plant:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:197    .text.plant:00000000 plant
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:871    .bss:00000020 x4.4849
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:874    .bss:00000028 x3.4848
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:877    .bss:00000030 x2.4847
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:880    .bss:00000038 x1.4846
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:883    .bss:00000040 y.4850
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:382    .text.PIDcontrol:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:387    .text.PIDcontrol:00000000 PIDcontrol
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:842    .bss:00000008 enOld.4859
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:845    .bss:00000010 sn.4858
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:851    .data:00000000 Kp.4855
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:857    .data:00000008 Ki.4856
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:863    .data:00000010 Kd.4857
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:868    .bss:00000018 un.4860
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:574    .rodata:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:575    .rodata:00000000 .LC0
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:578    .rodata:00000008 .LC1
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:581    .rodata:00000034 .LC2
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:584    .text.main:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:589    .text.main:00000000 main
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:839    .bss:00000004 loop.4878
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:828    .text.main:00000220 $d
+C:\Users\Student\AppData\Local\Temp\ccmXEjTA.s:848    .data:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
